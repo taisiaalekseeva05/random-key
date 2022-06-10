@@ -63,6 +63,14 @@ body {
     padding: 0 17px;
 }
 
+.todo-task h6 {
+    white-space: nowrap;
+   /* запрещает перенос строк */
+   overflow: hidden;
+   /* обрезаем все что не помещается в область  */
+
+}
+
 .btn-del {
     color: white;
     background-color: #F85C50;

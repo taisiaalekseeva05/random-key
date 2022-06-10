@@ -76,8 +76,8 @@
 
             let jsonList = JSON.stringify(todoList)
             localStorage.setItem('todoList', jsonList);
-            // const todoList = localStorage.getItem('todoList');
-            //localStorage.removeItem('todoList');
+           // const todoList = localStorage.getItem('todoList');
+           // localStorage.removeItem('todoList');
 
             htmlBlock = `<div id="` + bodyList["key"] + `" class="todo-task">
                             <h6>` + textInInput + `</h6>
@@ -98,6 +98,21 @@
             // console.log(element)
             element.addEventListener('click', function() {
                 element.parentNode.remove()
+                let nowId =element.parentNode.id
+
+                for (let index = 0; index < storageList.length; index++) {
+                    const element = storageList[index];
+                    // console.log(element)
+                   // удаление из localStorage
+                    if (nowId == element.key) {
+                        storageList.splice(index, 1)
+                        console.log(storageList)
+                    }
+                }
+                console.log(storageList)
+                let jsonList = JSON.stringify(todoList)
+                localStorage.setItem('todoList', jsonList);
+
             });
         }
     }
