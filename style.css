@@ -63,8 +63,22 @@ body {
     padding: 0 17px;
 }
 
+.todo-task h6 {
+    white-space: nowrap;
+    /* запрещает перенос строк */
+    overflow: hidden;
+    /* обрезает все что не помещается в области */
+    text-overflow: ellipsis;
+    /* добавляет многоточие */
+}
+
 .btn-del {
     color: white;
     background-color: #F85C50;
     width: 10%;
+} 
+
+.task-complate {
+    text-decoration: line-through;
+    color: rgb(70, 0, 108);
 }
