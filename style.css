@@ -65,11 +65,18 @@ body {
 
 .todo-task h6 {
     white-space: nowrap;
+<<<<<<< HEAD
     /* запрещает перенос строк */
     overflow: hidden;
     /* обрезает все что не помещается в области */
     text-overflow: ellipsis;
     /* добавляет многоточие */
+=======
+   /* запрещает перенос строк */
+   overflow: hidden;
+   /* обрезаем все что не помещается в область  */
+
+>>>>>>> 7607b10e9b53917f22ddd0c8df95edb6cdb68733
 }
 
 .btn-del {

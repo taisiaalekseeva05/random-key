@@ -79,8 +79,8 @@
 
             let jsonList = JSON.stringify(todoList)
             localStorage.setItem('todoList', jsonList);
-            // const todoList = localStorage.getItem('todoList');
-            //localStorage.removeItem('todoList');
+           // const todoList = localStorage.getItem('todoList');
+           // localStorage.removeItem('todoList');
 
             htmlBlock = `<div id="` + bodyList["key"] + `" class="todo-task">
                             <h6>` + textInInput + `</h6>
@@ -105,18 +105,28 @@
             // console.log(element)
             element.addEventListener('click', function() {
                 element.parentNode.remove()
+<<<<<<< HEAD
                 let nowID = element.parentNode.id
+=======
+                let nowId =element.parentNode.id
+>>>>>>> 7607b10e9b53917f22ddd0c8df95edb6cdb68733
 
                 for (let index = 0; index < storageList.length; index++) {
                     const element = storageList[index];
                     // console.log(element)
+<<<<<<< HEAD
                     if (nowID == element.key) {
                         // console.log(element)
+=======
+                   // удаление из localStorage
+                    if (nowId == element.key) {
+>>>>>>> 7607b10e9b53917f22ddd0c8df95edb6cdb68733
                         storageList.splice(index, 1)
                         console.log(storageList)
                     }
                 }
                 console.log(storageList)
+<<<<<<< HEAD
                 let jsonList =JSON.stringify(todoList)
                 localStorage.setItem('todoList',jsonList);
 
@@ -143,6 +153,11 @@
                 console.log(storageList)
                 let jsonList =JSON.stringify(todoList)
                 localStorage.setItem('todoList',jsonList);    
+=======
+                let jsonList = JSON.stringify(todoList)
+                localStorage.setItem('todoList', jsonList);
+
+>>>>>>> 7607b10e9b53917f22ddd0c8df95edb6cdb68733
             });
         }
     }
